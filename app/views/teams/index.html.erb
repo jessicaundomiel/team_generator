@@ -1,0 +1,21 @@
+<tbody>
+  <tr><td align="center" colspan="5"><h1>Current Team List</h1></td></tr>
+        <% @teams.each_with_index do |team, index| %>
+        <tr><td>Team <%= index+1 %>: </td></tr>
+        <tr><td><%= team.join(', ') %></td></tr>
+        <tr>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %><td>
+        </tr>
+        <% end %>
+    <tr height="80" align="center" colspan="2"><td>
+    <div class="green-btn one-row">
+      <a href="/teams/make_teams">Make New Teams</a>
+    </div>
+    <div class="green-btn one-row">
+      <a href="/students">Student List</a>
+    </div>
+    </td></tr>
+    <tr><td><%= link_to 'New Team', new_team_path %></td></tr>
+</tbody>

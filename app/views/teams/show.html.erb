@@ -1,0 +1,11 @@
+<tbody>
+	<tr id="notice"><td><%= notice %></td></tr>
+
+	<tr><td>
+	  <strong>Members:</strong>
+	  <%= @team.members %>
+	</tr></td>
+
+	<tr><td><%= link_to 'Edit', edit_team_path(@team) %> |
+	<%= link_to 'Back', teams_path %></td></tr>
+</tbody>
